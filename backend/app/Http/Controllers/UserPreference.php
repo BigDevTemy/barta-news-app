@@ -219,7 +219,7 @@ class UserPreference extends Controller
 
     // Search the `News` table for matches in title, body, or source_name
         
-        $results = News::select('title','image')->where(function($q) use ($terms) {
+        $results = News::select('title','image','body')->where(function($q) use ($terms) {
             foreach ($terms as $term) {
                 $lowerTerm = strtolower($term);
                 $q->orWhereRaw('LOWER(title) LIKE ?', ["%{$lowerTerm}%"])

@@ -22,6 +22,7 @@ const App = ({visible,isVisible}) => {
         isLoading(false)
             if(res.success){
                console.log()
+               isVisible(false);
                navigate("/user/search-results", { state: { data: res.data } });
                 // form.resetFields();
             }

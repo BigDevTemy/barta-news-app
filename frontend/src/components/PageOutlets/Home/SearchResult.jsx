@@ -20,6 +20,13 @@ const Index = ()=>{
       const handlePageChange = (page) => {
           setCurrentPage(page);
       };
+
+      const  truncate=(str, length = 200, ending = '...')=> {
+        if (str?.length > length) {
+          return str.slice(0, length) + ending;
+        }
+        return str;
+      }
     return(
         <div className="w-full h-full min-h-[50vh] flex flex-col px-20">
             <h1 className="text-2xl mb-4 mt-10">Search Result(s)</h1>
@@ -31,9 +38,14 @@ const Index = ()=>{
                                 dataSource={currentData}
                                 renderItem={(item) => (
                                     <List.Item>
-                                        <div className="w-full flex h-full">
-                                                <div className="rounded-xl border-2 border-black"><img src={item?.image} className="w-[80px] h-[80px] rounded-md "/></div>
-                                                <div className="text-md font-bold ml-2">{item?.title}</div>
+                                        <div className="w-full flex h-full flex items-center">
+                                                <div className=""><img src={item?.image} className="w-[40px] h-[40px] flex-1 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 "/></div>
+                                                <div className="w-full">
+                                                    <div className="text-md font-bold ml-2 w-1/2">{item?.title}</div>
+                                                    <div className="text-sm  ml-2 w-2/3" >{truncate(item?.body)}</div>
+                                                    
+                                                </div>
+                                                
                                         </div>
                                         
                                     </List.Item>
