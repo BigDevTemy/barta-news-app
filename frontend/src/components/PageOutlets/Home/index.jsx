@@ -1,6 +1,8 @@
 import { useEffect,useState } from 'react'
 import TopHeadLine from './TopHeadlines'
 import TopStories from './TopStories'
+import RecentNews from './RecentNew'
+import Featurednews from './FeaturedNews'
 import Stickers from './sticker'
 import { useDispatch,useSelector } from 'react-redux'
 import { fetchRecords } from '../../common'
@@ -49,6 +51,8 @@ const Index=()=>{
             {/* <Stickers/> */}
             <TopHeadLine/>
             <TopStories/>
+            <RecentNews/>
+            <Featurednews/>
         </div>
     )
 }

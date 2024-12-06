@@ -35,3 +35,4 @@ Route::post('save_source', [UserPreference::class, 'save_source'])->middleware('
 Route::post('save_author', [UserPreference::class, 'save_author'])->middleware('jwt.auth');
 Route::get('get_news_source_author', [UserPreference::class, 'getNewSources'])->middleware('jwt.auth');
 Route::get('get_top_headline', [UserPreference::class, 'getNewsHeadline'])->middleware('optional.auth');
+Route::post('query', [UserPreference::class, 'search_query']);

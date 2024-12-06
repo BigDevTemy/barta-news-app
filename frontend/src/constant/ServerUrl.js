@@ -7,3 +7,4 @@ export const SAVE_SOURCE = 'save_source';
 export const SAVE_AUTHOR = 'save_author';
 export const NEWS_AUTHOR_SOURCES='get_news_source_author';
 export const GET_TOP_HEADLINE='get_top_headline';
+export const QUERY='query';

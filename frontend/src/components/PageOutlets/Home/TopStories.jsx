@@ -7,7 +7,7 @@ const Index = ()=>{
     const {recentnews} = useSelector((state)=>state.topnewsheadline);
     return (
         <>
-        <div className='w-1/4 h-12 bg-red-700  p-4 text-white text-xl mt-8 mb-2'>
+        <div className='w-1/4 h-12 bg-red-700  p-4 text-white text-xl mt-8 mb-8'>
                 Top Stories
         </div>
         {

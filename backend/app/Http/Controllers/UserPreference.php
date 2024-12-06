@@ -207,4 +207,33 @@ class UserPreference extends Controller
         
     }
 
+    public function search_query(Request $request){
+        $query = $request->input('query');
+
+        if (empty($query)) {
+            //return response()->json(['message' => 'Query parameter is required'], 400);
+            // return $this->error("","Query parameter is required");
+            return $this->error("","Query parameter is required",500);
+        }
+        $terms = explode(' ', $query); // Split the query into individual words
+
+    // Search the `News` table for matches in title, body, or source_name
+        
+        $results = News::select('title','image')->where(function($q) use ($terms) {
+            foreach ($terms as $term) {
+                $lowerTerm = strtolower($term);
+                $q->orWhereRaw('LOWER(title) LIKE ?', ["%{$lowerTerm}%"])
+                  ->orWhereRaw('LOWER(body) LIKE ?', ["%{$lowerTerm}%"])
+                  ->orWhereRaw('LOWER(url) LIKE ?', ["%{$lowerTerm}%"]);
+            }
+        })->get();
+
+
+    
+        // Return the results as a JSON response
+
+        return $this->success($results);
+        
+    }
+
 }

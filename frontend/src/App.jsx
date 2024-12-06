@@ -7,6 +7,7 @@ import Home from './components/PageOutlets/Home'
 import Register from './components/PageOutlets/Register'
 import Login from './components/PageOutlets/Login'
 import Settings from './components/PageOutlets/Settings'
+import Search from './components/PageOutlets/Home/SearchResult'
 function App() {
   
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='register/user' element={<Register />}/>
         <Route path='user/login' element={<Login />}/>
         <Route path='user/settings' element={<Settings />}/>
+        <Route path='user/search-results' element={<Search />}/>
       </Route>
 
     </Routes>

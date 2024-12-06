@@ -9,6 +9,7 @@ import { clearUserDetails } from "../../app/reducers/userdetails"
 import { LOGOUT } from "../../constant/ServerUrl"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import SearchModal from '../util/modal'
 
 const items = [
     {
@@ -36,9 +37,16 @@ const items = [
 const Index = ()=>{
     const {userdetails} = useSelector((state)=>state.userdetails);
     const[loading,isLoading] = useState(false)
+    const [show,isShow] = useState(false)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     console.log(userdetails?.user)
+
+    const handleSearch = ()=>{
+      isShow(true)
+    }
+
+    
 
     
     const handleMenuClick = (e) => {
@@ -87,6 +95,7 @@ const Index = ()=>{
       }
     return(
         <>
+          <SearchModal visible={show} isVisible={isShow}/>        
             <div className="w-full h-10 bg-custom-gray px-20 flex items-center">
                 <div className="flex flex-1">
                     <div className="flex items-center">
@@ -130,7 +139,7 @@ const Index = ()=>{
                     <Link className="flex-[0.5] flex justify-center text-white text-sm font-semibold">ENTERTAINMENT</Link>
                     
                     <div className="flex-[0.7] flex items-center bg-white ml-4 rounded-md p-1">
-                        <Input className="flex-grow outline-none border-none focus:outline-none focus:ring-0" />
+                        <Input className="flex-grow outline-none border-none focus:outline-none focus:ring-0" onClick={()=>handleSearch()} />
                         <SearchOutlined className="text-black ml-2" />
                     </div>
 
