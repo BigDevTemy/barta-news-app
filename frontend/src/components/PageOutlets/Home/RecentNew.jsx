@@ -18,7 +18,9 @@ const Index = () =>{
             <div className='w-full h-full lg:w-1/4 lg:h-12 bg-green-700  p-4 text-white text-xl mt-8 mb-8'>
                 Recent News
             </div>
-            <div className="w-full h-full flex flex-col lg:flex-row gap-2 ">
+            {
+                breaker && 
+                <div className="w-full h-full flex flex-col lg:flex-row gap-2 ">
                 <div className="flex-1 relative">
                     <div>
                             <img 
@@ -55,6 +57,11 @@ const Index = () =>{
                     </div>
                 </div>
             </div>
+            }
+            {
+                 !breaker && <div className='text-black font-bold'>No Data Found!</div>
+            }
+            
         </>
         
     )

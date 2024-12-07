@@ -105,6 +105,10 @@ const Index = ()=>{
                 </div>
         </div>
         }
+
+        {
+            !topstories && <div className='text-black font-bold'>No Data Found!</div>
+        }
         
         
         </>
