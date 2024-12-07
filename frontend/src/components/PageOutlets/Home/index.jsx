@@ -47,7 +47,7 @@ const Index=()=>{
         })
     }
     return (
-        <div className="w-full h-full px-20">
+        <div className="w-full h-full px-5 lg:px-20">
             {/* <Stickers/> */}
             <TopHeadLine/>
             <TopStories/>

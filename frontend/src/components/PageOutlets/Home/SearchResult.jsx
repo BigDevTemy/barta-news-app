@@ -28,8 +28,8 @@ const Index = ()=>{
         return str;
       }
     return(
-        <div className="w-full h-full min-h-[50vh] flex flex-col px-20">
-            <h1 className="text-2xl mb-4 mt-10">Search Result(s)</h1>
+        <div className="w-full h-full lg:min-h-[50vh] flex flex-col lg:px-20 px-5">
+            <h1 className="text-2xl mb-4 mt-10 text-md sm:text-sm">Search Result(s)</h1>
             {
                 data && data?.length > 0 ?
                     <>
@@ -41,8 +41,8 @@ const Index = ()=>{
                                         <div className="w-full flex h-full flex items-center">
                                                 <div className=""><img src={item?.image} className="w-[40px] h-[40px] flex-1 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 "/></div>
                                                 <div className="w-full">
-                                                    <div className="text-md font-bold ml-2 w-1/2">{item?.title}</div>
-                                                    <div className="text-sm  ml-2 w-2/3" >{truncate(item?.body)}</div>
+                                                    <div className="text-md font-bold ml-2 lg:w-1/2 w-full">{item?.title}</div>
+                                                    <div className="text-sm  ml-2 lg:w-2/3 w-full" >{truncate(item?.body)}</div>
                                                     
                                                 </div>
                                                 

@@ -9,10 +9,10 @@ const Index = () =>{
     
     return (
         <>
-            <div className='w-1/4 h-12 bg-gray-700 p-4 text-white text-xl mt-12 mb-8'>
+            <div className='w-full h-full lg:w-1/4 lg:h-12 bg-gray-700 p-4 text-white text-xl mt-12 mb-8'>
                 Featured News
             </div>
-            <div className="w-full h-[80vh] flex gap-4 mb-10">
+            <div className="w-full h-full lg:h-[80vh] flex flex-col lg:flex-row gap-4 mb-10">
                 <div className='flex-[0.3] relative'>
                     <div className="bg-black h-full cursor-pointer">
                         <img 

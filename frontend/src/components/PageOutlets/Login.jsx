@@ -54,12 +54,12 @@ const Index = ()=>{
         })
     }
     return (
-        <div className="w-full  h-full flex justify-center bg-custom-gray p-10">
-            <div className="mt-10 w-[50%] h-full bg-black/40 flex flex-col items-center p-4">
-                    <img src={Logo} className='w-1/6' />
-                    <div className='font-bold text-2xl text-white'>Sign in For Barta News Account </div>
-                    <div className='font-semibold text-white'>Don't have an Account ? <Link to='/register/user'>Sign up</Link></div>
-                    {errorMessage && <div className="w-[50%] mt-4 h-10 bg-red-200 text-sm text-black flex justify-center items-center text-semibold">{errorMessage}</div>}
+        <div className="w-full  h-full flex justify-center bg-custom-gray lg:p-10 p-5">
+            <div className="mt-10 w-full lg:w-[50%] h-full bg-black/40 flex flex-col items-center p-4">
+                    <img src={Logo} className=' w-1/4 lg:w-1/6'  />
+                    <div className='w-full font-bold lg:text-2xl text-white flex justify-center'>Sign in For Barta News Account </div>
+                    <div className='font-semibold text-white text-sm'>Don't have an Account ? <Link to='/register/user'>Sign up</Link></div>
+                    {errorMessage && <div className=" w-full lg:w-[50%] mt-4 h-10 bg-red-200 text-sm text-black flex justify-center items-center text-semibold">{errorMessage}</div>}
                     <Form
                         className='mt-4 w-2/3'
                         name='register-form'

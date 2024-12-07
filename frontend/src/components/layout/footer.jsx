@@ -4,8 +4,8 @@ import Logo from '../../assets/images/big-logo_light-1.png'
 
 const Index = ()=>{
     return(
-        <div className="w-full min-h-48 h-full bg-black px-20">
-           <div className="w-full flex mt-10">
+        <div className="w-full lg:min-h-48 h-full bg-black lg:px-20 px-5">
+           <div className="w-full flex lg:flex-row flex-col  mt-10">
             <div className="flex-1  flex-column">
                 <div className="text-white text-xl">
                     About Company
@@ -16,7 +16,7 @@ const Index = ()=>{
                 
                     On August 8, 1970, Barta-new (Nigeria) Limited was registered under the Companies Act of 1968 to engage in the business of publishing newspapers, magazines and other periodicals. It was designed to inform, educate and entertain Nigerians and the world at large.
                 </div>
-                <div className="w-full flex w-[100%] mt-10">
+                <div className="w-full flex w-[100%] mt-10 mb-4">
                
                     <FacebookOutlined className="flex-1 cursor-pointer text-white"/>
                     <TwitterOutlined className="flex-1 cursor-pointer text-white"/>
@@ -27,7 +27,7 @@ const Index = ()=>{
                     
                 </div>
             </div>
-            <div className="flex-1 flex-column">
+            <div className="flex-1 flex-col sm:mt-4">
                 <div className="text-white text-xl">
                     Recent Blog Post
                     <hr className="w-20 mt-4 border-2 border-red-500"/>
@@ -37,7 +37,7 @@ const Index = ()=>{
                         No Post(s)
                 </div>
             </div>
-            <div className="flex-1 flex-column">
+            <div className="flex-1 flex-col">
                 <div className="text-white text-xl">
                     Popular Categories
                     <hr className="w-20 mt-4 border-2 border-red-500"/>

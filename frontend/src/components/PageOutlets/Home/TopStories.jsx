@@ -7,13 +7,13 @@ const Index = ()=>{
     const {recentnews} = useSelector((state)=>state.topnewsheadline);
     return (
         <>
-        <div className='w-1/4 h-12 bg-red-700  p-4 text-white text-xl mt-8 mb-8'>
+        <div className='w-full lg:w-1/4 lg:h-12 bg-red-700  p-4 text-white text-xl mt-8 mb-8'>
                 Top Stories
         </div>
         {
             topstories && 
-            <div className="w-full h-[80vh] px-0 flex gap-3 mb-10">
-                <div className="flex-[0.7] h-full flex gap-4">
+            <div className="w-full h-full flex-col lg:h-[80vh] px-0 flex lg:flex-row gap-3 mb-10">
+                <div className="lg:flex-[0.7] h-full flex-col flex lg:flex-row gap-4">
                     <div className='flex-1 relative'>
                         <div className='h-full'>
                             <img 
