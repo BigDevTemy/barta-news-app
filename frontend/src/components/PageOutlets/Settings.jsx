@@ -179,13 +179,13 @@ const Index = ()=>{
     }
 
     return (
-        <div className="w-full h-full flex flex-col justify-center bg-gray-300 p-20">
+        <div className="w-full h-full flex flex-col justify-center bg-gray-300 p-5 lg:p-20">
             <div className="w-full min-h-48 h-full bg-white rounded-xl mb-4 p-8 mb-8">
-                <div className="text-2xl font-semibold">Basic Information</div>
+                <div className="lg:text-2xl font-semibold">Basic Information</div>
                 <small>Manage your personal information</small>
                 <hr className="mt-4"/>
                 <div className="w-full flex items-center gap-12 mt-4">
-                    <div className="text-md ">Display name</div>
+                    <div className="lg:text-md ">Display name</div>
                     <div className="text-md">{userdetails?.user?.name}</div>
 
                 </div>
@@ -200,10 +200,10 @@ const Index = ()=>{
             </div>
            
             <div className="w-full min-h-48 h-full bg-white rounded-xl mb-8 p-8">
-                <div className="text-2xl font-semibold">News Preference</div>
+                <div className="lg:text-2xl font-semibold">News Preference</div>
                 <small>Manage your news preference</small>
                 <hr className="mt-4"/>
-                <div className="w-full flex items-center mt-4">
+                <div className="w-full lg:flex items-center mt-4 gap-4">
                     <div className="text-md flex-[0.2]">Authors</div>
                     <div className="text-md flex-[0.4]">
                     {
@@ -250,7 +250,7 @@ const Index = ()=>{
 
                 </div>
                 <hr className="mt-4"/>
-                <div className="w-full flex items-center  mt-4">
+                <div className="w-full lg:flex items-center mt-4 gap-4">
                     <div className="text-md flex-[0.2]">Categories</div>
                     <div className="text-md flex-[0.4]">
                        {
@@ -268,7 +268,7 @@ const Index = ()=>{
                         <Select
                         showSearch
                         mode="multiple"
-                        className="w-full flex-[0.5]"
+                        className="w-full flex lg:flex-[0.5]"
                         optionFilterProp="children"
                         placeholder="Search category"
                         onChange={handleSelectedCategory}
@@ -298,7 +298,7 @@ const Index = ()=>{
                 </div>
                 <hr className="mt-4"/>
 
-                <div className="w-full flex items-center  mt-4">
+                <div className="w-full lg:flex items-center  mt-4 gap-2">
                     <div className="text-md flex-[0.2]">Source(s)</div>
                     <div className="text-md flex-[0.4]">
 
@@ -314,7 +314,7 @@ const Index = ()=>{
                         <Select
                         showSearch
                         mode="multiple"
-                        className="w-full flex-[0.5]"
+                        className="w-full flex-1 lg:flex-[0.5]"
                         optionFilterProp="children"
                         placeholder="Search source"
                         onChange={handleSelectSource}
@@ -345,7 +345,7 @@ const Index = ()=>{
 
             </div>
             <div className="w-full min-h-48 h-full bg-white rounded-xl mb-8 p-8">
-                <div className="text-2xl font-semibold">Manage Account</div>
+                <div className="lg:text-2xl font-semibold">Manage Account</div>
                
                 <hr className="mt-4"/>
                 <div className="w-full flex items-center  mt-4">

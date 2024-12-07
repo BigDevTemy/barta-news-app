@@ -25,10 +25,10 @@ Route::get('/', function (Request $request) {
 
 
 
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/refresh', [AuthController::class, 'refresh']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::post('login', [AuthController::class, 'login']);
+Route::post('register', [AuthController::class, 'register']);
+Route::post('refresh', [AuthController::class, 'refresh']);
+Route::get('logout', [AuthController::class, 'logout']);
 Route::get('me', [AuthController::class, 'me'])->middleware('jwt.auth');
 Route::post('save_category', [UserPreference::class, 'save_preference'])->middleware('jwt.auth');
 Route::post('save_source', [UserPreference::class, 'save_source'])->middleware('jwt.auth');
